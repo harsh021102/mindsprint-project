@@ -2,7 +2,7 @@ import React from 'react'
 import { useNavigate } from 'react-router-dom';
 import { TERipple } from 'tw-elements-react';
 
-const AdminCard = ({username,email}) => {
+const AdminCard = ({email}) => {
   const navigate = useNavigate();
 
   return (
@@ -10,12 +10,6 @@ const AdminCard = ({username,email}) => {
         className="flex rounded-lg bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700 w-full">
         <div className="p-6 flex w-full">
           <div className='flex flex-col md:flex-row justify-between items-center w-full'>
-            <div className='flex w-1/2'>
-              <h1 className="mb-2 ml-2 text-xl font-medium leading-tight text-neutral-800 dark:text-neutral-50">Username: </h1>
-              <h5 className="mb-2 ml-2 text-xl font-medium leading-tight text-neutral-800 dark:text-neutral-50">
-                {username}
-              </h5>
-            </div>
             <div className='flex w-1/2'>
               <h1 className="mb-2 ml-2 text-xl font-medium leading-tight text-neutral-800 dark:text-neutral-50">Email: </h1>
               <h5 className="mb-2 ml-2 text-xl font-medium leading-tight text-neutral-800 dark:text-neutral-50">

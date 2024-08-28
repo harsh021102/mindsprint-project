@@ -1,17 +1,28 @@
 // import { Link } from "react-router-dom"
 
 import Card from "../components/Card"
-import React, { useState } from 'react'
-import { categories, courses,allcourses,users } from '../assets/links'
+import React, { useEffect, useState } from 'react'
+import { categories, courses,allcourses } from '../assets/links'
 import { HorizontalCard } from "../components/HorizontalCard"
 import Footer from "../components/Footer"
 import AdminCard from "../components/AdminCard"
 import AdminCourseCard from "../components/AdminCourseCard"
+import axios from "axios"
 
 
 const AdminDashboard = () => {
-  const [display,setDisplay] = useState(true)
-  
+    const [display,setDisplay] = useState(true)
+    const [users,setUsers] = useState([])
+    useEffect(()=>{
+      const loadUSers = async () => {
+        const response = await axios.get('http://localhost:8082/api/student') 
+      
+        setUsers(response.data)
+      }
+      loadUSers()
+    }
+    ,[])
+
     const showHome = ()=>{
         if(!display)
             setDisplay(true)
@@ -39,7 +50,7 @@ const AdminDashboard = () => {
             <div className="flex flex-col gap-6 md:gap-5 justify-items-center md:justify-items-start h-screen overflow-y-scroll">
               {
                 users.map((item,index)=>(
-                  <AdminCard key={index} username={item.username} email={item.email}/>
+                  <AdminCard key={index} email={item.email}/>
                 ))
               }
             </div>
