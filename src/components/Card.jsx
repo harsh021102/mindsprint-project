@@ -2,11 +2,11 @@ import React from 'react'
 import { useNavigate } from 'react-router-dom';
 import { TERipple } from 'tw-elements-react';
 
-const Card = ({company,course,imageUrl,type}) => {
+const Card = ({company,course,imageUrl,type,id}) => {
   const navigate = useNavigate();
-  const handleclick = ()=>{
-    navigate('/dashboard/course/1')
-    console.log("click");
+  const handleclick = (cid)=>{
+    navigate(`/dashboard/coursedetails/${cid}`)
+    // console.log("click");
   }
   return (
     <div
@@ -41,7 +41,7 @@ const Card = ({company,course,imageUrl,type}) => {
             </p>
           </div>
           <TERipple>
-            <button onClick={handleclick}
+            <button onClick={()=>handleclick(id)}
               type="button"
               className="inline-block rounded bg-blue-700 px-6 pb-2 pt-2 text-xs font-normal uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]">
               Button

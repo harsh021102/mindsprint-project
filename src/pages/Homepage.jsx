@@ -9,7 +9,6 @@ const Homepage = () => {
   
   return (
     <>
-    <Navbar/>
     <section className="my-12 md:my-0 md:h-screen  flex justify-center items-center md:gap-0">
         <div className="text-section  h-full w-5/6 md:flex-1 flex flex-col gap-5 justify-center items-center md:items-start md:ml-10">
             <h1 className="text-6xl md:text-7xl mx-9 md:m-0 font-oswald">Learn without limits</h1>

@@ -14,7 +14,7 @@ const Register = () => {
                 <form type="submit" className="w-full flex justify-center flex-col items-center gap-5">
                     <input type="text" placeholder="Name" className="w-11/12 rounded-md outline-none p-3 bg-white" style={{border:"1px solid gray"}}/>
                     <input type="email" placeholder="Email" className="w-11/12 rounded-md outline-none p-3 bg-white" style={{border:"1px solid gray"}}/>
-                    <input type="password" placeholder="Your password" className="w-11/12 rounded-md outline-none p-3 bg-white" style={{border:"1px solid gray"}}/>
+                   <input type="password" placeholder="Your password" className="w-11/12 rounded-md outline-none p-3 bg-white" style={{border:"1px solid gray"}}/>
                     <button type="submit" className="w-10/12 mt-10 md:m-0 text-2xl md:text-lg bg-blue-700 py-4 px-8 md:py-3 md:px-6 text-white rounded-lg">Sign up</button>
                 </form>
             </div>

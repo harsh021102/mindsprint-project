@@ -1,8 +1,10 @@
 import React, { useState } from 'react'
-import { Outlet } from 'react-router-dom'
+import { Outlet, Route, Routes } from 'react-router-dom'
 import mindsprint from "../assets/mindsprint-logo.svg"
 import DropdownBtn from "../components/DropdownBtn"
 import Footer from './Footer'
+import Dashboard from '../pages/Dashboard'
+import CourseDetails from '../pages/CourseDetails'
 
 const DashboardNavbar = () => {
     const [display,setDisplay] = useState(true)
@@ -33,7 +35,10 @@ const DashboardNavbar = () => {
             <button className={`h-full px-4 font-oswald font-light ml-10 p-2 text-end ${display?'border-b-2 border-blue-700':''}`} onClick={showHome}>Home</button>
             <button className={`h-full px-4 font-oswald font-light p-2 text-end ${!display?'border-b-2 border-blue-700':''}`} onClick={showLearning}>My Learning</button>
         </div>
-        <Outlet context={[display,setDisplay]}/>
+        <Routes>
+            <Route path="/course" element={<Dashboard display={display}/>}/>
+            <Route path="/coursedetails/:id" element={<CourseDetails/>}/>
+        </Routes>
         <section className="px-3 lg:px-24  pt-14">
             <Footer/>
         </section>

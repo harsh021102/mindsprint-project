@@ -4,11 +4,9 @@ import Card from "../components/Card"
 import React, { useState } from 'react'
 import { categories, courses } from '../assets/links'
 import { HorizontalCard } from "../components/HorizontalCard"
-import { useOutletContext } from "react-router-dom"
 
 
-const Dashboard = () => {
-  const [display, setDisplay] = useOutletContext();
+const Dashboard = ({display}) => {
   
   return (
     <>
@@ -21,7 +19,7 @@ const Dashboard = () => {
             <div className="grid grid-cols-1 md:grid-cols-4 gap-6 md:gap-5 justify-items-center md:justify-items-start">
               {
                 courses.map((item,index)=>(
-                  <Card key={index} company={item.company} course={item.course} imageUrl={item.imageUrl} type={item.type}/>
+                  <Card key={index} company={item.company} course={item.course} imageUrl={item.imageUrl} type={item.type} id={index+1}/>
                 ))
               }
             </div>
