@@ -2,7 +2,9 @@ import React from 'react'
 import mindsprint from "../assets/mindsprint-logo.svg"
 import DropdownBtn from "../components/DropdownBtn"
 import Footer from '../components/Footer'
+import { useParams } from 'react-router-dom'
 const CourseDetails = () => {
+  const {id} = useParams()
     return (
       <>
         {/* Details */} 
@@ -10,6 +12,7 @@ const CourseDetails = () => {
           <div className="grid grid-cols-8 grid-rows-7 pt-16">
               <div className='col-span-8 md:col-span-5 row-span-4 bg-green-500 flex flex-col mx-16 justify-between'>
                 <div className='flex flex-col gap-7 bg-purple-300'>
+                  <h1 className='text-4xl'>{id}</h1>
                   <h1 className='text-4xl'>Architecting Solutions on AWS</h1>
                   <p className='text-2xl font-extralight'>This course is part of multiple programs.</p>
                 </div>

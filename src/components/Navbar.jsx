@@ -1,13 +1,15 @@
-import { Link} from "react-router-dom"
+import { Link, useNavigate} from "react-router-dom"
 import mindsprint from "../assets/mindsprint-logo.svg"
 
 const Navbar = () => {
   // console.log(showbtn);
+  const navigate = useNavigate()
   
   return (
-    <nav className="w-full h-16 flex justify-between lg:justify-between" style={{border: '1px solid gray'}}>
+    <nav className="w-full h-16 flex justify-between lg:justify-between">
         <div className="w-3/12 lg:w-2/12 ml-10 flex justify-center ">
-            <img src={mindsprint} alt="mindsprint logo" className="bg-cover bg-no-repeat bg-center  rounded-md cursor-pointer"/>
+            <img src={mindsprint} alt="mindsprint logo" className="bg-cover bg-no-repeat bg-center  rounded-md cursor-pointer"
+            onClick={()=>navigate('/')}/>
         </div>
         <div className="links flex justify-center items-center mr-4 gap-4 md:mr-16 text-md">
             <button className="p-2 text-blue-600 text-sm md:text-normal">

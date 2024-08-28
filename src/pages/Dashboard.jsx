@@ -4,13 +4,31 @@ import Card from "../components/Card"
 import React, { useState } from 'react'
 import { categories, courses } from '../assets/links'
 import { HorizontalCard } from "../components/HorizontalCard"
+import Footer from "../components/Footer"
 
 
-const Dashboard = ({display}) => {
+const Dashboard = () => {
+  const [display,setDisplay] = useState(true)
   
+    const showHome = ()=>{
+        if(!display)
+            setDisplay(true)
+        console.log("show home",display);
+        
+        
+    }
+    const showLearning = ()=>{
+        if(display)
+            setDisplay(false)
+        console.log("show learning",display);
+    }
   return (
     <>
       {/* Most popular courses */}
+      <div className="w-full text-normal h-12 flex gap-4  justify-start items-end border-b-1 border-slate-400">
+          <button className={`h-full px-4 font-oswald font-light ml-10 p-2 text-end ${display?'border-b-2 border-blue-700':''}`} onClick={showHome}>Home</button>
+          <button className={`h-full px-4 font-oswald font-light p-2 text-end ${!display?'border-b-2 border-blue-700':''}`} onClick={showLearning}>My Learning</button>
+      </div>
       {
         display?
         (<>
@@ -48,6 +66,9 @@ const Dashboard = ({display}) => {
         </section>
         </>):<div>Hello</div>
       }
+      <section className="px-3 lg:px-24  pt-14">
+            <Footer/>
+        </section>
     </>
   )
 }

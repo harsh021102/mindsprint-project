@@ -5,8 +5,9 @@ import DropdownBtn from "../components/DropdownBtn"
 import Footer from './Footer'
 import Dashboard from '../pages/Dashboard'
 import CourseDetails from '../pages/CourseDetails'
+import AdminDashboard from '../pages/AdminDashboard'
 
-const DashboardNavbar = () => {
+const AdminDashboardNavbar = () => {
   return (
     <>
         {/* <nav className="w-full h-16 flex justify-between lg:justify-between" >
@@ -19,12 +20,10 @@ const DashboardNavbar = () => {
         </nav> */}
         
         <Routes>
-            <Route path="/course" element={<Dashboard/>}/>
-            <Route path="/coursedetails/:id" element={<CourseDetails/>}/>
+            <Route path="/details" element={<AdminDashboard/>}/>
         </Routes>
-        
     </>
   )
 }
 
-export default DashboardNavbar
+export default AdminDashboardNavbar

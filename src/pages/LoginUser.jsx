@@ -1,6 +1,6 @@
 import mindsprint from '../assets/mindsprint-logo.svg'
 
-const Login = () => {
+const LoginUser = () => {
   return (
     <div className="h-screen flex justify-center items-center ">
         <div className='hidden h-screen w-6/12 md:flex justify-center items-center md:flex-auto bg-black'>
@@ -10,7 +10,7 @@ const Login = () => {
             <div className="h-full w-11/12 flex flex-col justify-center items-center">
                 <img src={mindsprint} alt="logo" className='my-6'/>
                 <h1 className="w-11/12 text-wrap text-start text-3xl mb-2 font-bold">Welcome Back!</h1>
-                <h1 className="w-11/12 text-wrap text-start text-xl mb-2 font-semibold">Login to your account</h1>
+                <h1 className="w-11/12 text-wrap text-start text-xl mb-2 font-semibold">Login to your account as user</h1>
                 <p className="w-11/12 text-wrap text-start text-sm m-3 font-light">Its nice to see you again.</p>
                 <form type="submit" className="w-full flex justify-center flex-col items-center gap-5">
                     <input type="email" placeholder="Your email" className="w-11/12 rounded-md outline-none p-3 bg-white" style={{border:"1px solid gray"}}/>
@@ -23,4 +23,4 @@ const Login = () => {
   )
 }
 
-export default Login
+export default LoginUser

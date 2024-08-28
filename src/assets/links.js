@@ -75,4 +75,96 @@ export const courses = [
         type: "Professional Course"
     }
 ];
+export const users = [
+    {
+        username: "harsh1601",
+        email: "harsh1601@gmail.com",
+        password: "12345"
+    },
+    {
+        username: "harsh1601",
+        email: "harsh1601@gmail.com",
+        password: "12345"
+    },
+    {
+        username: "harsh1601",
+        email: "harsh1601@gmail.com",
+        password: "12345"
+    },
+    {
+        username: "harsh1601",
+        email: "harsh1601@gmail.com",
+        password: "12345"
+    },
+    {
+        username: "harsh1601",
+        email: "harsh1601@gmail.com",
+        password: "12345"
+    },
+    {
+        username: "harsh1601",
+        email: "harsh1601@gmail.com",
+        password: "12345"
+    },
+    {
+        username: "harsh1601",
+        email: "harsh1601@gmail.com",
+        password: "12345"
+    },
+    {
+        username: "harsh1601",
+        email: "harsh1601@gmail.com",
+        password: "12345"
+    },
+    {
+        username: "harsh1601",
+        email: "harsh1601@gmail.com",
+        password: "12345"
+    },
+    {
+        username: "harsh1601",
+        email: "harsh1601@gmail.com",
+        password: "12345"
+    },
+    {
+        username: "harsh1601",
+        email: "harsh1601@gmail.com",
+        password: "12345"
+    },
+    {
+        username: "harsh1601",
+        email: "harsh1601@gmail.com",
+        password: "12345"
+    },
+    {
+        username: "harsh1601",
+        email: "harsh1601@gmail.com",
+        password: "12345"
+    },
+    {
+        username: "harsh1601",
+        email: "harsh1601@gmail.com",
+        password: "12345"
+    },
+    {
+        username: "harsh1601",
+        email: "harsh1601@gmail.com",
+        password: "12345"
+    },
+];
+export const allcourses = [
+    {
+        title: "AWS",
+        description: "asduhisha sdhahdasidjasi"
+    },
+    {
+        title: "Microsoft",
+        description: "asduhisha sdhahdasidjasi"
+    },
+    {
+        title: "Google",
+        description: "asduhisha sdhahdasidjasi"
+    },
+    
+];
 
