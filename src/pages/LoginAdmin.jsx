@@ -3,7 +3,7 @@ import mindsprint from '../assets/mindsprint-logo.svg'
 import { useState } from 'react'
 import axios from 'axios'
 
-const LoginAdmin = () => {
+const LoginAdmin = ({setLogged}) => {
   const [admin,setAdmin] = useState({name:'',email:'',password:''})
   const navigate = useNavigate()
   const handleLogin = async (e) => {
@@ -12,8 +12,10 @@ const LoginAdmin = () => {
         const resp = await axios.post('http://localhost:8082/api/admin/login',admin)
         if(resp.status==200) 
         {
-            alert("Login admin successfully")
-            navigate('/admindashboard')
+            // alert("Login admin successfully")
+            setLogged(true);
+            localStorage.setItem("loggedIn",JSON.stringify({loggedin: true,role: "admin"}))
+            navigate('/dashboard/admin')
         }
       } catch (error) {
           alert(error)

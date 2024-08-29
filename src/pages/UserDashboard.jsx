@@ -7,7 +7,7 @@ import { HorizontalCard } from "../components/HorizontalCard"
 import Footer from "../components/Footer"
 
 
-const Dashboard = () => {
+const UserDashboard = () => {
   const [display,setDisplay] = useState(true)
   
     const showHome = ()=>{
@@ -73,4 +73,4 @@ const Dashboard = () => {
   )
 }
 
-export default Dashboard
+export default UserDashboard

@@ -16,7 +16,6 @@ const AdminDashboard = () => {
     useEffect(()=>{
       const loadUSers = async () => {
         const response = await axios.get('http://localhost:8082/api/student') 
-      
         setUsers(response.data)
       }
       loadUSers()

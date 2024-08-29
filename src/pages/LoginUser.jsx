@@ -12,11 +12,12 @@ const LoginUser = () => {
             const resp = await axios.post('http://localhost:8082/api/student/login',student)
             if(resp.status==200) 
             {
-                alert("Login successfully")
-                navigate('/dashboard/course')
+                // alert("Login user successfully")
+                localStorage.setItem("loggedIn",JSON.stringify({loggedin: true,role: "user"}))
+                navigate('/dashboard/user')
             }
         } catch (error) {
-            alert(error)
+            // alert(error)
             console.log(error);
         }
     }
