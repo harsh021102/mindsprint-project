@@ -6,16 +6,17 @@ const Navbar = ({loggedIn,setLogged}) => {
   const navigate = useNavigate()
   const handleLogout = () => {
     localStorage.removeItem("loggedIn")
-    // setDisplay(false)
     setLogged(false);
     navigate('/')
   }
-  // useEffect(()=>setDisplay(localStorage.getItem("loggedin")!==null?true:false),[display])
   return (
     <nav className="w-full h-16 flex justify-between lg:justify-between">
         <div className="w-3/12 lg:w-2/12 ml-10 flex justify-center ">
             <img src={mindsprint} alt="mindsprint logo" className="bg-cover bg-no-repeat bg-center  rounded-md cursor-pointer"
-            onClick={()=>navigate('/')}/>
+            onClick={()=>{
+              setLogged(false)
+              navigate('/')
+            }}/>
         </div>
         <div className="links flex justify-center items-center mr-4 gap-4 md:mr-16 text-md">
             {

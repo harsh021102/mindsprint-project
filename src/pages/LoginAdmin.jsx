@@ -15,6 +15,8 @@ const LoginAdmin = ({setLogged}) => {
             // alert("Login admin successfully")
             setLogged(true);
             localStorage.setItem("loggedIn",JSON.stringify({loggedin: true,role: "admin"}))
+            console.log('hxja');
+            
             navigate('/dashboard/admin')
         }
       } catch (error) {
