@@ -77,7 +77,7 @@ const AdminDashboard = () => {
 				<>
 					<section className="py-12 my-12 mx-2 md:mx-4 md:my-0 flex flex-col px-3 lg:px-24">
 						<div className="flex">
-							<AddCourseModel loadCourses />
+							<AddCourseModel loadCourses={loadCourses} />
 						</div>
 						<h1 className="text-2xl md:text-3xl py-3 mb-4 font-oswald font-normal w-full">
 							All Courses

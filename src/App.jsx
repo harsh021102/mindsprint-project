@@ -14,12 +14,14 @@ import { useState } from "react";
 import AdminDashboard from "./pages/AdminDashboard";
 import UserDashboard from "./pages/UserDashboard";
 import ProtectedUserLogin from "./protectedroutes/ProtectedUserLogin";
-import CourseModel from "./components/AddCourseModal";
 
 function App() {
 	const [loggedIn, setLogged] = useState(false);
-	const [isAuthenticated, setIsAuthenticated] = useState(
-		JSON.parse(localStorage.getItem("loggedIn"))
+	const [isUserAuthenticated, setIsUserAuthenticated] = useState(
+		localStorage.getItem("loggedUser")
+	);
+	const [isAdminAuthenticated, setIsAdminAuthenticated] = useState(
+		localStorage.getItem("loggedAdmin")
 	);
 	// console.log(typeof JSON.parse(localStorage.getItem(isAuthenticated)))
 	// console.log(isAuthenticated);
@@ -47,7 +49,7 @@ function App() {
 					<Route
 						path="admin"
 						element={
-							<ProtectedAdminLogin isAuthenticated={isAuthenticated}>
+							<ProtectedAdminLogin isAdminAuthenticated={isAdminAuthenticated}>
 								<AdminDashboard />
 							</ProtectedAdminLogin>
 						}
@@ -55,7 +57,7 @@ function App() {
 					<Route
 						path="user"
 						element={
-							<ProtectedUserLogin isAuthenticated={isAuthenticated}>
+							<ProtectedUserLogin isUserAuthenticated={isUserAuthenticated}>
 								<UserDashboard />
 							</ProtectedUserLogin>
 						}

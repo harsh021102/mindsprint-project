@@ -7,7 +7,7 @@ import { Select } from "flowbite-react";
 import React from "react";
 import axios from "axios";
 
-const AddCourseModal = () => {
+const AddCourseModal = ({ loadCourses }) => {
 	const [course, setCourse] = useState({
 		title: "",
 		description: "",
@@ -15,10 +15,7 @@ const AddCourseModal = () => {
 		price: 0,
 	});
 	const [openModal, setOpenModal] = useState(false);
-	// const [title, setTitle] = useState("");
-	// const [description, setDescription] = useState("");
-	// const [category, setCategory] = useState("programming");
-	// const [price, setPrice] = useState(0.0);
+
 	function onCloseModal() {
 		setOpenModal(false);
 	}
@@ -33,6 +30,12 @@ const AddCourseModal = () => {
 			if (response.status === 201) {
 				alert("Course added successfully");
 				onCloseModal();
+				loadCourses();
+				course.title = "";
+				course.description = "";
+				course.category = "";
+				course.price = 0;
+				setCourse(course);
 			}
 		} catch (error) {
 			console.log(error);
