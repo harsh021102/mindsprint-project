@@ -17,19 +17,20 @@ import ProtectedUserLogin from "./protectedroutes/ProtectedUserLogin";
 
 function App() {
 	const [loggedIn, setLogged] = useState(false);
-	const [isUserAuthenticated, setIsUserAuthenticated] = useState(
-		localStorage.getItem("loggedUser")
-	);
 	const [isAdminAuthenticated, setIsAdminAuthenticated] = useState(
 		localStorage.getItem("loggedAdmin")
 	);
+	const [isUserAuthenticated, setIsUserAuthenticated] = useState(
+		localStorage.getItem("loggedUser")
+	);
+	console.log(isUserAuthenticated);
+
 	// console.log(typeof JSON.parse(localStorage.getItem(isAuthenticated)))
 	// console.log(isAuthenticated);
 	// console.log(typeof isAuthenticated);
 
 	return (
 		<>
-			{/* <CourseModel /> */}
 			<Navbar loggedIn={loggedIn} setLogged={setLogged} />
 			<Routes>
 				<Route path="/" element={<Homepage />} />
@@ -62,8 +63,9 @@ function App() {
 							</ProtectedUserLogin>
 						}
 					/>
+					<Route path="course/:id" element={<CourseDetails />} />
+					{/* <Route path="/coursedetails/:id" element={CourseDetails} /> */}
 				</Route>
-				<Route path="/coursedetails/:id" element={<CourseDetails />} />
 			</Routes>
 		</>
 	);

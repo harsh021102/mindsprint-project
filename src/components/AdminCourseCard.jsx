@@ -1,15 +1,12 @@
 import axios from "axios";
 import React from "react";
 
-const AdminCourseCard = ({ id, title, price, loadCourses }) => {
+const AdminCourseCard = ({ id, title, price, imageUrl, loadCourses }) => {
 	const handleDelete = async (cid) => {
-		console.log(id);
-
 		try {
 			const resp = await axios.delete(
 				`http://localhost:8082/api/course/${cid}`
 			);
-			console.log(resp.data);
 			loadCourses();
 		} catch (error) {
 			console.log(error);

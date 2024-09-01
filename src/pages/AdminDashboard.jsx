@@ -89,6 +89,7 @@ const AdminDashboard = () => {
 									id={item.id}
 									title={item.title}
 									price={item.price}
+									imageUrl={item.imageUrl}
 									loadCourses={loadCourses}
 								/>
 							))}

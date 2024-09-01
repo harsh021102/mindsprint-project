@@ -13,6 +13,7 @@ const AddCourseModal = ({ loadCourses }) => {
 		description: "",
 		category: "",
 		price: 0,
+		image_url: "",
 	});
 	const [openModal, setOpenModal] = useState(false);
 
@@ -35,6 +36,7 @@ const AddCourseModal = ({ loadCourses }) => {
 				course.description = "";
 				course.category = "";
 				course.price = 0;
+				course.image_url = "";
 				setCourse(course);
 			}
 		} catch (error) {
@@ -101,8 +103,8 @@ const AddCourseModal = ({ loadCourses }) => {
 								>
 									<option>Select a Category</option>
 									<option>Programming</option>
-									<option>Cloud</option>
-									<option>Science</option>
+									<option value="cloud">Cloud</option>
+									<option value="science">Science</option>
 									<option>OS</option>
 								</Select>
 							</div>
@@ -114,9 +116,24 @@ const AddCourseModal = ({ loadCourses }) => {
 									id="price"
 									type="text"
 									required
+									placeholder="0"
 									value={course.price}
 									onChange={(event) =>
 										setCourse({ ...course, price: event.target.value })
+									}
+								/>
+							</div>
+							<div>
+								<div className="mb-2 block">
+									<Label htmlFor="text" value="Image Link" />
+								</div>
+								<TextInput
+									id="image"
+									type="text"
+									required
+									value={course.image_url}
+									onChange={(event) =>
+										setCourse({ ...course, image_url: event.target.value })
 									}
 								/>
 							</div>
