@@ -64,7 +64,8 @@ const LoginAdmin = () => {
 								<input
 									type="email"
 									placeholder="Your email"
-									className="w-11/12 rounded-md outline-none p-3 bg-white"
+									required
+									className="w-11/12 rounded-md outline-none p-3 bg-white font-light"
 									style={{ border: "1px solid gray" }}
 									value={admin.email}
 									onChange={(e) =>
@@ -74,7 +75,8 @@ const LoginAdmin = () => {
 								<input
 									type="password"
 									placeholder="Your password"
-									className="w-11/12 rounded-md outline-none p-3 bg-white"
+									required
+									className="w-11/12 rounded-md outline-none p-3 bg-white font-light"
 									style={{ border: "1px solid gray" }}
 									value={admin.password}
 									onChange={(e) =>

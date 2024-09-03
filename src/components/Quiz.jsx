@@ -1,9 +1,8 @@
 "use client";
-import { Accordion } from "flowbite-react";
 import React, { useState } from "react";
 import { questions } from "../assets/links";
 import Print from "./Print";
-const Quiz = ({ download }) => {
+const Quiz = () => {
 	const [currentQuestion, setCurrentQuestion] = useState(0);
 	const [showScore, setShowScore] = useState(false);
 	const [score, setScore] = useState(0);

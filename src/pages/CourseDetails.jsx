@@ -1,10 +1,7 @@
 import React, { useEffect, useState } from "react";
-import mindsprint from "../assets/mindsprint-logo.svg";
-import DropdownBtn from "../components/DropdownBtn";
 import Footer from "../components/Footer";
 import { useParams } from "react-router-dom";
 import axios from "axios";
-import { categories } from "../assets/links";
 const CourseDetails = () => {
 	const { id } = useParams();
 	const [course, setCourse] = useState({
@@ -39,7 +36,6 @@ const CourseDetails = () => {
 		try {
 			const resp = await axios.get(`http://localhost:8082/api/course/${id}`);
 			setCourse(resp.data);
-			// console.log("id", resp.data.id);
 		} catch (error) {
 			console.log(error);
 		}

@@ -1,7 +1,7 @@
 import { Link, useNavigate } from "react-router-dom";
 import mindsprint from "../assets/mindsprint-logo.svg";
 
-const Navbar = ({ loggedIn, setLogged }) => {
+const Navbar = ({ setLogged }) => {
 	const navigate = useNavigate();
 	const loggedUser = localStorage.getItem("loggedUser");
 	const loggedAdmin = localStorage.getItem("loggedAdmin");

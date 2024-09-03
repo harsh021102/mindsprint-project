@@ -1,10 +1,7 @@
-import { HorizontalCard } from "../components/HorizontalCard";
 import { bannerimage } from "../assets/links";
-import { categories } from "../assets/links";
 import Testimonial from "../components/Testimonial";
 import Footer from "../components/Footer";
-import Navbar from "../components/Navbar";
-import { Navigate, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const Homepage = () => {
 	const navigate = useNavigate();
@@ -38,16 +35,6 @@ const Homepage = () => {
 					/>
 				</div>
 			</section>
-			{/* <section className="py-12 my-12 mx-2 md:mx-4 md:my-0 flex flex-col px-3 lg:px-24">
-      <h1 className="text-4xl mt-6 mb-14">Explore Categories</h1>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-5">
-        {
-            categories.map((item,index)=>(
-                <HorizontalCard key={index} name={item.name} number={item.number} image={item.image}/>
-            ))
-        }
-      </div>
-    </section> */}
 			<section className="py-24 my-12 md:my-0 px-3 lg:px-24 bg-slate-200">
 				<Testimonial />
 			</section>

@@ -1,9 +1,4 @@
-// import { Link } from "react-router-dom"
-
-import Card from "../components/Card";
 import React, { useEffect, useState } from "react";
-import { categories, courses, allcourses } from "../assets/links";
-import { HorizontalCard } from "../components/HorizontalCard";
 import Footer from "../components/Footer";
 import AdminCard from "../components/AdminCard";
 import AdminCourseCard from "../components/AdminCourseCard";

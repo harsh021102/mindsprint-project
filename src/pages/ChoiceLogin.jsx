@@ -1,6 +1,5 @@
 import Footer from "../components/Footer";
-import mindsprint from "../assets/mindsprint-logo.svg";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const ChoiceLogin = () => {
 	const navigate = useNavigate();

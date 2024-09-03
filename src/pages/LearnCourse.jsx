@@ -6,7 +6,6 @@ import Loader from "../components/Loader";
 const LearnCourse = () => {
 	const { id } = useParams();
 
-	// const [displayButton, setDisplayButton] = useState(false);
 	const [displayQuiz, setDisplayQuiz] = useState(false);
 	const [course, setCourse] = useState({});
 	const [download, showDownload] = useState(false);
@@ -39,7 +38,6 @@ const LearnCourse = () => {
 									height="100%"
 									src={course.video_url}
 									title="YouTube video player"
-									// frameBorder="0"
 									allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
 									referrerPolicy="strict-origin-when-cross-origin"
 									allowFullScreen

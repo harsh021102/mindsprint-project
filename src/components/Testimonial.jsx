@@ -1,5 +1,3 @@
-/* eslint-disable react/no-unescaped-entities */
-
 const Testimonial = () => {
 	return (
 		<div className="py-5 dark:bg-gray-900 rounded-lg">

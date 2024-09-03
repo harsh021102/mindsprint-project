@@ -1,5 +1,4 @@
 import Homepage from "./pages/Homepage";
-import Login from "./pages/LoginAdmin";
 import { Routes, Route } from "react-router-dom";
 import ChoiceLogin from "./pages/ChoiceLogin";
 import ChoiceRegister from "./pages/ChoiceRegister";
@@ -17,7 +16,6 @@ import ProtectedUserLogin from "./protectedroutes/ProtectedUserLogin";
 import LearnCourse from "./pages/LearnCourse";
 import ProtectedLearning from "./protectedroutes/ProtectedLearning";
 import ProtectedCourseDetails from "./protectedroutes/ProtectedCourseDetails";
-import Loader from "./components/Loader";
 
 function App() {
 	const [loggedIn, setLogged] = useState(false);

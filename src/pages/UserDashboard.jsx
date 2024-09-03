@@ -1,7 +1,5 @@
 import Card from "../components/Card";
 import React, { useEffect, useState } from "react";
-import { categories, courses } from "../assets/links";
-import { HorizontalCard } from "../components/HorizontalCard";
 import Footer from "../components/Footer";
 import axios from "axios";
 import MyCard from "../components/MyCards";

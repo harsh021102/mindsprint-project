@@ -59,7 +59,7 @@ const RegisterUser = () => {
 							type="text"
 							placeholder="Name"
 							required
-							className="w-11/12 rounded-md outline-none p-3 bg-white"
+							className="w-11/12 rounded-md outline-none p-3 bg-white font-light"
 							style={{ border: "1px solid gray" }}
 							value={student.name}
 							onChange={(e) => setStudent({ ...student, name: e.target.value })}
@@ -68,7 +68,7 @@ const RegisterUser = () => {
 							type="email"
 							placeholder="Email"
 							required
-							className="w-11/12 rounded-md outline-none p-3 bg-white"
+							className="w-11/12 rounded-md outline-none p-3 bg-white font-light"
 							style={{ border: "1px solid gray" }}
 							value={student.email}
 							onChange={(e) =>
@@ -79,7 +79,7 @@ const RegisterUser = () => {
 							type="password"
 							placeholder="Your password"
 							required
-							className="w-11/12 rounded-md outline-none p-3 bg-white"
+							className="w-11/12 rounded-md outline-none p-3 bg-white font-light"
 							style={{ border: "1px solid gray" }}
 							value={student.password}
 							onChange={(e) =>

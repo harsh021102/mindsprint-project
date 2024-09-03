@@ -47,7 +47,8 @@ const RegisterAdmin = () => {
 						<input
 							type="text"
 							placeholder="Name"
-							className="w-11/12 rounded-md outline-none p-3 bg-white"
+							required
+							className="w-11/12 rounded-md outline-none p-3 bg-white font-light"
 							style={{ border: "1px solid gray" }}
 							value={admin.name}
 							onChange={(e) => setAdmin({ ...admin, name: e.target.value })}
@@ -55,7 +56,8 @@ const RegisterAdmin = () => {
 						<input
 							type="email"
 							placeholder="Email"
-							className="w-11/12 rounded-md outline-none p-3 bg-white"
+							required
+							className="w-11/12 rounded-md outline-none p-3 bg-white font-light"
 							style={{ border: "1px solid gray" }}
 							value={admin.email}
 							onChange={(e) => setAdmin({ ...admin, email: e.target.value })}
@@ -63,7 +65,8 @@ const RegisterAdmin = () => {
 						<input
 							type="password"
 							placeholder="Your password"
-							className="w-11/12 rounded-md outline-none p-3 bg-white"
+							required
+							className="w-11/12 rounded-md outline-none p-3 bg-white font-light"
 							style={{ border: "1px solid gray" }}
 							value={admin.password}
 							onChange={(e) => setAdmin({ ...admin, password: e.target.value })}

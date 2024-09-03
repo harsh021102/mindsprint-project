@@ -1,5 +1,4 @@
-import { Link, useNavigate } from "react-router-dom";
-import mindsprint from "../assets/mindsprint-logo.svg";
+import { useNavigate } from "react-router-dom";
 
 const ChoiceRegister = () => {
 	const navigate = useNavigate();

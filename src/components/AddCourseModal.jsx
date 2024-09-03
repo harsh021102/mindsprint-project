@@ -1,7 +1,7 @@
 "use client";
 
 import { Button, Checkbox, Label, Modal, TextInput } from "flowbite-react";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Select } from "flowbite-react";
 
 import React from "react";
@@ -97,10 +97,8 @@ const AddCourseModal = ({ loadCourses }) => {
 									id="category"
 									required
 									value={course.category}
-									// placeholder=
 									onChange={(event) => {
 										setCourse({ ...course, category: event.target.value });
-										// console.log(category);
 									}}
 								>
 									<option>Select a Category</option>
