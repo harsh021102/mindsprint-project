@@ -20,7 +20,7 @@ const RegisterAdmin = () => {
 		}
 	};
 	return (
-		<div className="h-screen flex justify-center items-center flex-row-reverse ">
+		<div className="h-screen flex justify-center items-center flex-row-reverse font-oswald">
 			<div className="hidden h-screen w-6/12 md:flex justify-center items-center md:flex-auto bg-black">
 				<video
 					src="https://hrcdn.net/fcore/assets/onboarding/globe-5fdfa9a0f4.mp4"

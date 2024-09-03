@@ -18,12 +18,11 @@ const LearnCourse = () => {
 		}
 	};
 	useEffect(() => {
-		// setTimeout(() => setDisplayButton(true), 10000);
 		fetchCourseById();
 	}, []);
 	return (
 		<>
-			<div className=" flex justify-start items-center flex-col">
+			<div className=" flex justify-start items-center flex-col font-oswald">
 				<div className="w-full h-96 flex justify-center items-start">
 					<iframe
 						width="100%"

@@ -14,22 +14,16 @@ const LoginUser = () => {
 				student
 			);
 			if (resp.status == 200) {
-				// alert("Login user successfully")
-				localStorage.setItem(
-					"loggedUser",
-					student.email
-					// JSON.stringify({ loggedIn: true, user: student.email })
-				);
+				localStorage.setItem("loggedUser", student.email);
 				navigate("/dashboard/user");
 			}
 		} catch (error) {
-			// alert(error)
 			console.log(error);
 		}
 	};
 
 	return (
-		<div className="h-screen flex justify-center items-center ">
+		<div className="h-screen flex justify-center items-center font-oswald">
 			<div className="hidden h-screen w-6/12 md:flex justify-center items-center md:flex-auto bg-black">
 				<video
 					src="https://hrcdn.net/fcore/assets/onboarding/globe-5fdfa9a0f4.mp4"

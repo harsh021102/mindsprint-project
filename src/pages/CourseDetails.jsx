@@ -29,8 +29,8 @@ const CourseDetails = () => {
 			const respCourse = await axios.post(
 				`http://localhost:8082/api/student/studentcoursedetails/${semail}`
 			);
+			``;
 			setEnrolledcourse(respCourse.data);
-			// console.log("enrolled courses:", respCourse.data);
 		} catch (error) {
 			console.log(error);
 		}
@@ -50,8 +50,7 @@ const CourseDetails = () => {
 				`http://localhost:8082/api/student/add/${sid}/course/${id}`
 			);
 			loadCourseDetails();
-			// console.log("enroll course", resp.data);
-			// setEnroll(fals
+			setEnroll(false);
 		} catch (error) {
 			console.log(error);
 		}
@@ -82,7 +81,7 @@ const CourseDetails = () => {
 	return (
 		<>
 			{/* Details */}
-			<section className=" md:h-screen flex justify-center">
+			<section className=" md:h-screen flex justify-center font-oswald">
 				<div className="w-full md:w-9/12 grid grid-cols-12 md:grid-cols-8 grid-rows-7 pt-16 bg-slate-100">
 					<div className="col-span-12 md:col-span-5 row-span-4 flex flex-col mx-16 justify-between ">
 						<div className="flex flex-col gap-7">

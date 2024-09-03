@@ -17,24 +17,14 @@ import ProtectedUserLogin from "./protectedroutes/ProtectedUserLogin";
 import LearnCourse from "./pages/LearnCourse";
 import ProtectedLearning from "./protectedroutes/ProtectedLearning";
 import ProtectedCourseDetails from "./protectedroutes/ProtectedCourseDetails";
-import Print from "./components/Print";
-import Certificate from "./components/Certificate";
+import Loader from "./components/Loader";
 
 function App() {
 	const [loggedIn, setLogged] = useState(false);
-	const [isAdminAuthenticated, setIsAdminAuthenticated] = useState(
-		localStorage.getItem("loggedAdmin")
-	);
-
-	// console.log(isUserAuthenticated);
-
-	// console.log(typeof JSON.parse(localStorage.getItem(isAuthenticated)))
-	// console.log(isAuthenticated);
-	// console.log(typeof isAuthenticated);
-
 	return (
 		<>
 			<Navbar loggedIn={loggedIn} setLogged={setLogged} />
+			{/* <Loader /> */}
 			<Routes>
 				<Route path="/" element={<Homepage />} />
 				<Route path="/login" element={<ChoiceLogin />} />
@@ -53,7 +43,7 @@ function App() {
 					<Route
 						path="admin"
 						element={
-							<ProtectedAdminLogin isAdminAuthenticated={isAdminAuthenticated}>
+							<ProtectedAdminLogin>
 								<AdminDashboard />
 							</ProtectedAdminLogin>
 						}
@@ -66,7 +56,6 @@ function App() {
 							</ProtectedUserLogin>
 						}
 					/>
-					{/* <Route path="learn/:id" element={<LearnCourse />} /> */}
 					<Route
 						path="learn/:id"
 						element={
