@@ -17,6 +17,8 @@ import ProtectedUserLogin from "./protectedroutes/ProtectedUserLogin";
 import LearnCourse from "./pages/LearnCourse";
 import ProtectedLearning from "./protectedroutes/ProtectedLearning";
 import ProtectedCourseDetails from "./protectedroutes/ProtectedCourseDetails";
+import Print from "./components/Print";
+import Certificate from "./components/Certificate";
 
 function App() {
 	const [loggedIn, setLogged] = useState(false);
@@ -33,16 +35,6 @@ function App() {
 	return (
 		<>
 			<Navbar loggedIn={loggedIn} setLogged={setLogged} />
-			{/* <iframe
-				width="560"
-				height="315"
-				src="https://www.youtube.com/embed/4D3X6Xl5c_Y?si=H8OoZrE3rWdG9IQ5"
-				title="YouTube video player"
-				frameborder="0"
-				allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-				referrerpolicy="strict-origin-when-cross-origin"
-				allowfullscreen
-			></iframe> */}
 			<Routes>
 				<Route path="/" element={<Homepage />} />
 				<Route path="/login" element={<ChoiceLogin />} />

@@ -2,7 +2,8 @@
 import { Accordion } from "flowbite-react";
 import React, { useState } from "react";
 import { questions } from "../assets/links";
-const Quiz = () => {
+import Print from "./Print";
+const Quiz = ({ download }) => {
 	const [currentQuestion, setCurrentQuestion] = useState(0);
 	const [showScore, setShowScore] = useState(false);
 	const [score, setScore] = useState(0);
@@ -36,9 +37,9 @@ const Quiz = () => {
 							You scored {score} out of {questions.length}
 							<div className="w-full  flex justify-center items-center mt-16 md:mt-0">
 								{showDownloadCertificate ? (
-									<button className=" mt-10 md:mt-4 text-2xl md:text-lg bg-blue-700 py-4 px-8 md:py-3 md:px-6 text-white rounded-lg">
-										Download Certificate
-									</button>
+									<>
+										<Print />
+									</>
 								) : (
 									<></>
 								)}

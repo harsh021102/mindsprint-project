@@ -29,8 +29,6 @@ const CourseDetails = () => {
 			const respCourse = await axios.post(
 				`http://localhost:8082/api/student/studentcoursedetails/${semail}`
 			);
-			console.log(respCourse);
-
 			setEnrolledcourse(respCourse.data);
 			// console.log("enrolled courses:", respCourse.data);
 		} catch (error) {
@@ -80,7 +78,6 @@ const CourseDetails = () => {
 		fetchStudentIdByEmail();
 		fetchCourseById(id);
 		loadCourseDetails(id);
-		// checkIfCourseIsEnrolled(id);
 	}, []);
 	return (
 		<>
