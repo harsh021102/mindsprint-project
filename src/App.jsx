@@ -14,16 +14,17 @@ import { useState } from "react";
 import AdminDashboard from "./pages/AdminDashboard";
 import UserDashboard from "./pages/UserDashboard";
 import ProtectedUserLogin from "./protectedroutes/ProtectedUserLogin";
+import LearnCourse from "./pages/LearnCourse";
+import ProtectedLearning from "./protectedroutes/ProtectedLearning";
+import ProtectedCourseDetails from "./protectedroutes/ProtectedCourseDetails";
 
 function App() {
 	const [loggedIn, setLogged] = useState(false);
 	const [isAdminAuthenticated, setIsAdminAuthenticated] = useState(
 		localStorage.getItem("loggedAdmin")
 	);
-	const [isUserAuthenticated, setIsUserAuthenticated] = useState(
-		localStorage.getItem("loggedUser")
-	);
-	console.log(isUserAuthenticated);
+
+	// console.log(isUserAuthenticated);
 
 	// console.log(typeof JSON.parse(localStorage.getItem(isAuthenticated)))
 	// console.log(isAuthenticated);
@@ -32,6 +33,16 @@ function App() {
 	return (
 		<>
 			<Navbar loggedIn={loggedIn} setLogged={setLogged} />
+			{/* <iframe
+				width="560"
+				height="315"
+				src="https://www.youtube.com/embed/4D3X6Xl5c_Y?si=H8OoZrE3rWdG9IQ5"
+				title="YouTube video player"
+				frameborder="0"
+				allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+				referrerpolicy="strict-origin-when-cross-origin"
+				allowfullscreen
+			></iframe> */}
 			<Routes>
 				<Route path="/" element={<Homepage />} />
 				<Route path="/login" element={<ChoiceLogin />} />
@@ -58,13 +69,28 @@ function App() {
 					<Route
 						path="user"
 						element={
-							<ProtectedUserLogin isUserAuthenticated={isUserAuthenticated}>
+							<ProtectedUserLogin>
 								<UserDashboard />
 							</ProtectedUserLogin>
 						}
 					/>
-					<Route path="course/:id" element={<CourseDetails />} />
-					{/* <Route path="/coursedetails/:id" element={CourseDetails} /> */}
+					{/* <Route path="learn/:id" element={<LearnCourse />} /> */}
+					<Route
+						path="learn/:id"
+						element={
+							<ProtectedLearning>
+								<LearnCourse />
+							</ProtectedLearning>
+						}
+					/>
+					<Route
+						path="coursedetails/:id"
+						element={
+							<ProtectedCourseDetails>
+								<CourseDetails />
+							</ProtectedCourseDetails>
+						}
+					/>
 				</Route>
 			</Routes>
 		</>

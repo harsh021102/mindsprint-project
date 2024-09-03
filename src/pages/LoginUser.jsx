@@ -15,7 +15,11 @@ const LoginUser = () => {
 			);
 			if (resp.status == 200) {
 				// alert("Login user successfully")
-				localStorage.setItem("loggedUser", true);
+				localStorage.setItem(
+					"loggedUser",
+					student.email
+					// JSON.stringify({ loggedIn: true, user: student.email })
+				);
 				navigate("/dashboard/user");
 			}
 		} catch (error) {

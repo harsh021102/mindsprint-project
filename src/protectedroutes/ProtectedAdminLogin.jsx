@@ -1,8 +1,8 @@
 import React from "react";
 import { Navigate } from "react-router-dom";
 
-const ProtectedAdminLogin = ({ isAdminAuthenticated, children }) => {
-	console.log(isAdminAuthenticated);
+const ProtectedAdminLogin = ({ children }) => {
+	const isAdminAuthenticated = localStorage.getItem("loggedAdmin");
 
 	return <>{isAdminAuthenticated ? children : <Navigate to="/login" />}</>;
 };

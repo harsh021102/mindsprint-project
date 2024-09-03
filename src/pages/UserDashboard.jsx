@@ -1,21 +1,34 @@
-// import { Link } from "react-router-dom"
-
 import Card from "../components/Card";
 import React, { useEffect, useState } from "react";
 import { categories, courses } from "../assets/links";
 import { HorizontalCard } from "../components/HorizontalCard";
 import Footer from "../components/Footer";
 import axios from "axios";
+import MyCard from "../components/MyCards";
 
 const UserDashboard = () => {
 	const [display, setDisplay] = useState(true);
 	const [course, setCourse] = useState([]);
+	const [mycourse, setMycourse] = useState([]);
 	const [category, setCategory] = useState([
+		"cloud",
+		"programming",
 		"science",
 		"os",
-		"programming",
-		"cloud",
 	]);
+	const [semail, setSemail] = useState(localStorage.getItem("loggedUser"));
+
+	const fetchMyCourses = async () => {
+		try {
+			const respCourse = await axios.post(
+				`http://localhost:8082/api/student/studentcoursedetails/${semail}`
+			);
+			setMycourse(respCourse.data);
+		} catch (error) {
+			console.log(error);
+		}
+	};
+
 	const loadCourses = async () => {
 		const resp = await axios.get(`http://localhost:8082/api/course`);
 		setCourse(resp.data);
@@ -26,11 +39,10 @@ const UserDashboard = () => {
 	}, []);
 	const showHome = () => {
 		if (!display) setDisplay(true);
-		console.log("show home", display);
 	};
 	const showLearning = () => {
 		if (display) setDisplay(false);
-		console.log("show learning", display);
+		fetchMyCourses();
 	};
 	return (
 		<>
@@ -77,7 +89,26 @@ const UserDashboard = () => {
 					))}
 				</>
 			) : (
-				<div>Hello</div>
+				<>
+					<section className="py-12 my-12 mx-2 md:mx-4 md:my-0 flex flex-col px-3 lg:px-24 h-screen">
+						<h1 className="text-2xl md:text-3xl py-3 mb-4 font-oswald font-normal w-full ">
+							Courses
+						</h1>
+						<div className="grid grid-cols-1 md:grid-cols-4 gap-6 md:gap-5 justify-items-center md:justify-items-start overflow-auto">
+							{mycourse.map((c, index) => {
+								return (
+									<MyCard
+										key={index}
+										company={c.title}
+										imageUrl={c.image_url}
+										price={c.price}
+										id={c.id}
+									/>
+								);
+							})}
+						</div>
+					</section>
+				</>
 			)}
 			<section className="px-3 lg:px-24  pt-14">
 				<Footer />

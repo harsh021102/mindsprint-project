@@ -16,8 +16,7 @@ const LoginAdmin = ({ setLogged }) => {
 			if (resp.status == 200) {
 				// alert("Login admin successfully")
 				setLogged(true);
-				localStorage.setItem("loggedAdmin", true);
-
+				localStorage.setItem("loggedAdmin", admin.email);
 				navigate("/dashboard/admin");
 			}
 		} catch (error) {

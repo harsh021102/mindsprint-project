@@ -1,7 +1,7 @@
 import React from "react";
 import { Navigate } from "react-router-dom";
 
-const ProtectedUserLogin = ({ children }) => {
+const ProtectedCourseDetails = ({ children }) => {
 	// console.log(isUserAuthenticated);
 
 	// console.log("User", isUserAuthenticated);
@@ -9,4 +9,4 @@ const ProtectedUserLogin = ({ children }) => {
 	return <>{isUserAuthenticated ? children : <Navigate to="/login/user" />}</>;
 };
 
-export default ProtectedUserLogin;
+export default ProtectedCourseDetails;

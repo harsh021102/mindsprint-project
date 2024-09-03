@@ -14,6 +14,7 @@ const AddCourseModal = ({ loadCourses }) => {
 		category: "",
 		price: 0,
 		image_url: "",
+		video_url: "",
 	});
 	const [openModal, setOpenModal] = useState(false);
 
@@ -37,6 +38,7 @@ const AddCourseModal = ({ loadCourses }) => {
 				course.category = "";
 				course.price = 0;
 				course.image_url = "";
+				course.video_url = "";
 				setCourse(course);
 			}
 		} catch (error) {
@@ -102,10 +104,10 @@ const AddCourseModal = ({ loadCourses }) => {
 									}}
 								>
 									<option>Select a Category</option>
-									<option>Programming</option>
+									<option value="os">Operating System</option>
+									<option value="programming">Programming</option>
 									<option value="cloud">Cloud</option>
 									<option value="science">Science</option>
-									<option>OS</option>
 								</Select>
 							</div>
 							<div>
@@ -137,7 +139,21 @@ const AddCourseModal = ({ loadCourses }) => {
 									}
 								/>
 							</div>
-							<div className="w-full">
+							<div>
+								<div className="mb-2 block">
+									<Label htmlFor="text" value="Video Link" />
+								</div>
+								<TextInput
+									id="image"
+									type="text"
+									required
+									value={course.video_url}
+									onChange={(event) =>
+										setCourse({ ...course, video_url: event.target.value })
+									}
+								/>
+							</div>
+							<div className="w-full mt-6">
 								<Button className="bg-blue-700" type="submit">
 									Submit
 								</Button>

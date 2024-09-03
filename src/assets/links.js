@@ -168,3 +168,97 @@ export const allcourses = [
     
 ];
 
+export const questions = [
+    {
+      questionText: "What is the capital of France?",
+      answerOptions: [
+        { answerText: "Berlin", isCorrect: false },
+        { answerText: "Madrid", isCorrect: false },
+        { answerText: "Paris", isCorrect: true },
+        { answerText: "Lisbon", isCorrect: false },
+      ],
+    },
+    {
+      questionText: "Which planet is known as the Red Planet?",
+      answerOptions: [
+        { answerText: "Earth", isCorrect: false },
+        { answerText: "Mars", isCorrect: true },
+        { answerText: "Jupiter", isCorrect: false },
+        { answerText: "Saturn", isCorrect: false },
+      ],
+    },
+    {
+      questionText: "What is the largest ocean on Earth?",
+      answerOptions: [
+        { answerText: "Atlantic Ocean", isCorrect: false },
+        { answerText: "Indian Ocean", isCorrect: false },
+        { answerText: "Arctic Ocean", isCorrect: false },
+        { answerText: "Pacific Ocean", isCorrect: true },
+      ],
+    },
+    {
+      questionText: "Who wrote 'To Kill a Mockingbird'?",
+      answerOptions: [
+        { answerText: "Harper Lee", isCorrect: true },
+        { answerText: "Mark Twain", isCorrect: false },
+        { answerText: "Ernest Hemingway", isCorrect: false },
+        { answerText: "F. Scott Fitzgerald", isCorrect: false },
+      ],
+    },
+    {
+      questionText: "What is the smallest unit of matter?",
+      answerOptions: [
+        { answerText: "Molecule", isCorrect: false },
+        { answerText: "Atom", isCorrect: true },
+        { answerText: "Electron", isCorrect: false },
+        { answerText: "Proton", isCorrect: false },
+      ],
+    },
+    {
+      questionText: "Which element has the chemical symbol 'O'?",
+      answerOptions: [
+        { answerText: "Gold", isCorrect: false },
+        { answerText: "Oxygen", isCorrect: true },
+        { answerText: "Silver", isCorrect: false },
+        { answerText: "Iron", isCorrect: false },
+      ],
+    },
+    // {
+    //   questionText: "What is the hardest natural substance on Earth?",
+    //   answerOptions: [
+    //     { answerText: "Gold", isCorrect: false },
+    //     { answerText: "Iron", isCorrect: false },
+    //     { answerText: "Diamond", isCorrect: true },
+    //     { answerText: "Platinum", isCorrect: false },
+    //   ],
+    // },
+    // {
+    //   questionText: "Who painted the Mona Lisa?",
+    //   answerOptions: [
+    //     { answerText: "Vincent van Gogh", isCorrect: false },
+    //     { answerText: "Pablo Picasso", isCorrect: false },
+    //     { answerText: "Leonardo da Vinci", isCorrect: true },
+    //     { answerText: "Claude Monet", isCorrect: false },
+    //   ],
+    // },
+    // {
+    //   questionText: "What is the capital of Japan?",
+    //   answerOptions: [
+    //     { answerText: "Seoul", isCorrect: false },
+    //     { answerText: "Beijing", isCorrect: false },
+    //     { answerText: "Tokyo", isCorrect: true },
+    //     { answerText: "Bangkok", isCorrect: false },
+    //   ],
+    // },
+    // {
+    //   questionText: "Which gas do plants absorb from the atmosphere?",
+    //   answerOptions: [
+    //     { answerText: "Oxygen", isCorrect: false },
+    //     { answerText: "Nitrogen", isCorrect: false },
+    //     { answerText: "Carbon Dioxide", isCorrect: true },
+    //     { answerText: "Hydrogen", isCorrect: false },
+    //   ],
+    // },
+  ];
+  
+  
