@@ -24,7 +24,7 @@ const Homepage = () => {
 						and companies.
 					</h4>
 					<button
-						className="w-10/12 md:w-3/12 mt-10 md:m-0 text-normal md:text-normal bg-blue-700 py-4 px-8 md:py-4 md:px-2 rounded-md text-white font-oswald"
+						className="w-10/12 md:w-3/12 mt-10 md:m-0 text-normal md:text-normal font-light bg-blue-700 py-4 px-8 md:py-4 md:px-2 rounded-md text-white font-oswald"
 						onClick={openRegister}
 					>
 						Join for Free

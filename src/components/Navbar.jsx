@@ -28,18 +28,18 @@ const Navbar = ({ loggedIn, setLogged }) => {
 				{loggedAdmin == null && loggedUser == null ? (
 					<>
 						<button className="p-2 text-blue-600 text-sm md:text-normal">
-							<Link to="/login" className="no-underline font-oswald">
+							<Link to="/login" className="no-underline font-oswald font-light">
 								Login
 							</Link>
 						</button>
-						<button className="py-2 px-2 text-blue-600 border-2 border-blue-600 rounded-md text-sm md:text-normal">
+						<button className="py-2 px-2 text-blue-600 border-1 border-blue-600 rounded-md text-sm md:text-normal">
 							<Link to="/register" className="no-underline font-oswald">
 								Join for Free
 							</Link>
 						</button>
 					</>
 				) : (
-					<button className="py-2 px-2 text-blue-600 border-2 border-blue-600 rounded-md text-sm md:text-normal">
+					<button className="py-2 px-2 text-blue-600 border-1 border-blue-600 rounded-md text-sm md:text-normal">
 						<Link
 							to="/"
 							className="no-underline font-oswald"

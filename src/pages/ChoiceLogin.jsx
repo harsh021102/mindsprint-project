@@ -13,8 +13,8 @@ const ChoiceLogin = () => {
 						For admins
 					</h1>
 					<p className="text-center font-light text-xl  w-8/12 font-oswald">
-						We are the market–leading technical interview platform to identify
-						and hire developers with the right skills.
+						Log in to manage and enhance our market-leading platform, ensuring
+						we continue to identify and hire developers with the right skills.
 					</p>
 					<button
 						className="w-8/12 md:w-4/12 mt-10 md:m-0 text-2xl md:text-lg bg-blue-700 py-4 px-8 md:py-2 md:px-6 rounded-md text-white font-medium font-oswald"
@@ -25,9 +25,9 @@ const ChoiceLogin = () => {
 				</div>
 				<div className="md:w-1/2 h-full flex justify-center items-center flex-col gap-5 py-16">
 					<h1 className="text-4xl font-oswald font-bold ">For users</h1>
-					<p className="text-center font-light text-xl w-8/12 font-oswald">
-						We are the market–leading technical interview platform to identify
-						and hire developers with the right skills.
+					<p className="text-center font-extralight text-xl w-8/12 font-oswald">
+						Log in to continue your journey with the market-leading platform for
+						mastering technical skills and advancing your career.
 					</p>
 					<button
 						className="w-8/12 md:w-4/12 mt-10 md:m-0 text-2xl md:text-lg py-4 px-8 md:py-2 md:px-6 font-oswald rounded-md font-medium"

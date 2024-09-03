@@ -10,10 +10,6 @@ const Testimonial = () => {
 				<h2 className="max-w-2xl mt-3 text-3xl font-bold leading-snug tracking-tight text-gray-800 lg:leading-tight lg:text-4xl dark:text-white font-oswald">
 					Here's what our customers said
 				</h2>
-				<p className="max-w-2xl py-4 text-lg leading-normal text-gray-500 lg:text-xl xl:text-xl dark:text-gray-300 font-oswald">
-					Testimonials is a great way to increase brand trust and awareness. Use
-					this section to highlight your popular customers.
-				</p>
 			</div>
 			<div className="container p-6 mx-auto mb-10 xl:px-0">
 				<div className="grid gap-10 lg:grid-cols-2 xl:grid-cols-3">
@@ -36,7 +32,7 @@ const Testimonial = () => {
 									/>
 								</div>
 								<div>
-									<div className="text-lg font-medium text-gray-200 font-oswald">
+									<div className="text-lg font-medium text-gray-600 font-oswald">
 										Sarah Steiner
 									</div>
 									<div className="text-gray-600 dark:text-gray-400 font-oswald">
@@ -48,7 +44,7 @@ const Testimonial = () => {
 					</div>
 					<div className="">
 						<div className="flex flex-col justify-between w-full h-full px-6 py-6 bg-gray-100 dark:bg-gray-800 md:px-14 rounded-2xl md:py-14 dark:bg-trueGray-800">
-							<p className="text-2xl leading-normal dark:text-gray-300 font-oswald">
+							<p className="text-2xl leading-normal dark:text-gray-600 font-oswald">
 								Make sure you only pick the{" "}
 								<mark className="mx-1 text-indigo-800 bg-indigo-100 rounded-md ring-indigo-100 ring-4 dark:ring-indigo-900 dark:bg-indigo-900 dark:text-indigo-200">
 									right sentence
@@ -64,7 +60,7 @@ const Testimonial = () => {
 									/>
 								</div>
 								<div>
-									<div className="text-lg font-medium text-gray-200 font-oswald">
+									<div className="text-lg font-medium text-gray-600 font-oswald">
 										Dylan Ambrose
 									</div>
 									<div className="text-gray-600 dark:text-gray-400 font-oswald">
@@ -92,7 +88,7 @@ const Testimonial = () => {
 									/>
 								</div>
 								<div>
-									<div className="text-lg font-medium text-gray-200 font-oswald">
+									<div className="text-lg font-medium text-gray-600 font-oswald">
 										Gabrielle Winn
 									</div>
 									<div className="text-gray-600 dark:text-gray-400 font-oswald">

@@ -10,13 +10,14 @@ const Footer = () => {
 					</a>
 					<div className="mt-6 lg:max-w-xl">
 						<p className="text-sm text-gray-800">
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi
-							felis mi, faucibus dignissim lorem id, imperdiet interdum mauris.
-							Vestibulum ultrices sed libero non porta. Vivamus malesuada urna
-							eu nibh malesuada, non finibus massa laoreet. Nunc nisi velit,
-							feugiat a semper quis, pulvinar id libero. Vivamus mi diam,
-							consectetur non orci ut, tincidunt pretium justo. In vehicula
-							porta molestie. Suspendisse potenti.
+							At Mindsprint, we believe in transforming lives through
+							accessible, high-quality education. Our platform partners with top
+							universities and organizations worldwide to offer courses,
+							specializations, and degrees in a wide range of subjects. Whether
+							you’re looking to advance your career, explore new interests, or
+							gain new skills, Coursera provides the tools and resources to help
+							you achieve your goals. Join our global community of learners and
+							start your journey today!
 						</p>
 					</div>
 				</div>
@@ -25,20 +26,20 @@ const Footer = () => {
 					<p className="text-base font-bold tracking-wide text-gray-900">
 						Popular Courses
 					</p>
-					<a href="#">UPSC - Union Public Service Commission</a>
-					<a href="#">General Knowledge</a>
-					<a href="#">MBA</a>
+					<a href="#">C++</a>
+					<a href="#">Python</a>
+					<a href="#">Kubernetes</a>
 					<p className="text-base font-bold tracking-wide text-gray-900">
 						Popular Topics
 					</p>
-					<a href="#">Human Resource Management</a>
-					<a href="#">Operations Management</a>
-					<a href="#">Marketing Management</a>
+					<a href="#">Science</a>
+					<a href="#">Programming</a>
+					<a href="#">Cloud</a>
 				</div>
 
 				<div>
 					<p className="text-base font-bold tracking-wide text-gray-900">
-						COMPANY IS ALSO AVAILABLE ON
+						WE ARE ALSO AVAILABLE ON
 					</p>
 					<div className="flex items-center gap-1 px-2">
 						<a href="#" className="w-full min-w-xl">
@@ -72,7 +73,7 @@ const Footer = () => {
 			</div>
 			<div className="flex flex-col-reverse justify-between pt-5 pb-10 border-t lg:flex-row">
 				<p className="text-sm text-gray-600">
-					© Copyright 2023 Company. All rights reserved.
+					© Copyright 2024 Company. All rights reserved.
 				</p>
 				<ul className="flex flex-col mb-3 space-y-2 lg:mb-0 sm:space-y-0 sm:space-x-5 sm:flex-row">
 					<li>

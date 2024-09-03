@@ -46,7 +46,7 @@ const UserDashboard = () => {
 	useEffect(() => {
 		setTimeout(() => {
 			setLoading(false);
-		}, 3000);
+		}, 2000);
 		loadCourses();
 	}, []);
 	return (
@@ -74,7 +74,7 @@ const UserDashboard = () => {
 							{category.map((item, i) => (
 								<section
 									key={i}
-									className="py-12 my-12 mx-2 md:mx-4 md:my-0 flex flex-col px-3 lg:px-24 h-screen"
+									className="py-12 my-12 mx-2 font-oswald md:mx-4 md:my-0 flex flex-col px-3 lg:px-24 h-screen"
 								>
 									<h1 className="text-2xl md:text-3xl py-3 mb-4 font-oswald font-normal w-full ">
 										{item[0].toUpperCase() + item.slice(1)} Courses
@@ -99,7 +99,7 @@ const UserDashboard = () => {
 						</>
 					) : (
 						<>
-							<section className="py-12 my-12 mx-2 md:mx-4 md:my-0 flex flex-col px-3 lg:px-24 h-screen">
+							<section className="py-12 my-12 mx-2 md:mx-4 font-oswald md:my-0 flex flex-col px-3 lg:px-24 h-screen">
 								<h1 className="text-2xl md:text-3xl py-3 mb-4 font-oswald font-normal w-full ">
 									Courses
 								</h1>

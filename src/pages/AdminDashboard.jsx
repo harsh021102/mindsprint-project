@@ -9,11 +9,14 @@ import AdminCard from "../components/AdminCard";
 import AdminCourseCard from "../components/AdminCourseCard";
 import axios from "axios";
 import AddCourseModel from "../components/AddCourseModal";
+import Loader from "../components/Loader";
 
 const AdminDashboard = () => {
 	const [display, setDisplay] = useState(true);
 	const [users, setUsers] = useState([]);
 	const [courses, setCourses] = useState([]);
+	const [loading, setLoading] = useState(true);
+
 	const loadUsers = async () => {
 		const response = await axios.get("http://localhost:8082/api/student");
 		setUsers(response.data);
@@ -22,10 +25,6 @@ const AdminDashboard = () => {
 		const response = await axios.get("http://localhost:8082/api/course");
 		setCourses(response.data);
 	};
-	useEffect(() => {
-		loadUsers();
-		loadCourses();
-	}, []);
 
 	const showHome = () => {
 		if (!display) setDisplay(true);
@@ -34,6 +33,14 @@ const AdminDashboard = () => {
 		if (display) setDisplay(false);
 		loadCourses();
 	};
+
+	useEffect(() => {
+		setTimeout(() => {
+			setLoading(false);
+		}, 2000);
+		loadUsers();
+		loadCourses();
+	}, []);
 	return (
 		<>
 			{/* Most popular courses */}
@@ -51,46 +58,52 @@ const AdminDashboard = () => {
 					Courses
 				</button>
 			</div>
-			{display ? (
-				<>
-					<section className="py-12 my-12 mx-2 md:mx-4 md:my-0 flex flex-col px-3 lg:px-24">
-						<h1 className="text-2xl md:text-3xl py-3 mb-4 font-oswald font-normal w-full">
-							All Users
-						</h1>
-						<div className="flex flex-col gap-6 md:gap-5 justify-items-center md:justify-items-start h-screen overflow-y-scroll">
-							{users.map((item, index) => (
-								<AdminCard
-									key={index}
-									id={item.id}
-									email={item.email}
-									loadUsers={loadUsers}
-								/>
-							))}
-						</div>
-					</section>
-				</>
+			{loading ? (
+				<Loader />
 			) : (
 				<>
-					<section className="py-12 my-12 mx-2 md:mx-4 md:my-0 flex flex-col px-3 lg:px-24">
-						<div className="flex">
-							<AddCourseModel loadCourses={loadCourses} />
-						</div>
-						<h1 className="text-2xl md:text-3xl py-3 mb-4 font-oswald font-normal w-full">
-							All Courses
-						</h1>
-						<div className="flex flex-col gap-6 md:gap-5 justify-items-center md:justify-items-start h-screen overflow-y-scroll">
-							{courses.map((item, index) => (
-								<AdminCourseCard
-									key={index}
-									id={item.id}
-									title={item.title}
-									price={item.price}
-									imageUrl={item.imageUrl}
-									loadCourses={loadCourses}
-								/>
-							))}
-						</div>
-					</section>
+					{display ? (
+						<>
+							<section className="py-12 my-12 mx-2 md:mx-4 md:my-0 flex flex-col px-3 lg:px-24">
+								<h1 className="text-2xl md:text-3xl py-3 mb-4 font-oswald font-normal w-full">
+									All Users
+								</h1>
+								<div className="flex flex-col gap-6 md:gap-5 justify-items-center md:justify-items-start h-screen overflow-y-scroll">
+									{users.map((item, index) => (
+										<AdminCard
+											key={index}
+											id={item.id}
+											email={item.email}
+											loadUsers={loadUsers}
+										/>
+									))}
+								</div>
+							</section>
+						</>
+					) : (
+						<>
+							<section className="py-12 my-12 mx-2 md:mx-4 md:my-0 flex flex-col px-3 lg:px-24">
+								<div className="flex">
+									<AddCourseModel loadCourses={loadCourses} />
+								</div>
+								<h1 className="text-2xl md:text-3xl py-3 mb-4 font-oswald font-normal w-full">
+									All Courses
+								</h1>
+								<div className="flex flex-col gap-6 md:gap-5 justify-items-center md:justify-items-start h-screen overflow-y-scroll">
+									{courses.map((item, index) => (
+										<AdminCourseCard
+											key={index}
+											id={item.id}
+											title={item.title}
+											price={item.price}
+											imageUrl={item.imageUrl}
+											loadCourses={loadCourses}
+										/>
+									))}
+								</div>
+							</section>
+						</>
+					)}
 				</>
 			)}
 			<section className="px-3 lg:px-24  pt-14">
