@@ -42,6 +42,7 @@ const AddCourseModal = ({ loadCourses }) => {
 				setCourse(course);
 			}
 		} catch (error) {
+			alert(error);
 			console.log(error);
 		}
 	};

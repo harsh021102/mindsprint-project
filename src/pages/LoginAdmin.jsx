@@ -21,7 +21,6 @@ const LoginAdmin = () => {
 			}
 		} catch (error) {
 			alert(error);
-			console.log(error);
 		}
 	};
 	useEffect(() => {

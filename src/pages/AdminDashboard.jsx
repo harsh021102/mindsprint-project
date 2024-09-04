@@ -13,12 +13,20 @@ const AdminDashboard = () => {
 	const [loading, setLoading] = useState(true);
 
 	const loadUsers = async () => {
-		const response = await axios.get("http://localhost:8082/api/student");
-		setUsers(response.data);
+		try {
+			const response = await axios.get("http://localhost:8082/api/student");
+			setUsers(response.data);
+		} catch (error) {
+			alert(error);
+		}
 	};
 	const loadCourses = async () => {
-		const response = await axios.get("http://localhost:8082/api/course");
-		setCourses(response.data);
+		try {
+			const response = await axios.get("http://localhost:8082/api/course");
+			setCourses(response.data);
+		} catch (error) {
+			alert(error);
+		}
 	};
 
 	const showHome = () => {

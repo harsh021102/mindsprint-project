@@ -25,13 +25,18 @@ const UserDashboard = () => {
 			);
 			setMycourse(respCourse.data);
 		} catch (error) {
+			alert(error);
 			console.log(error);
 		}
 	};
 
 	const loadCourses = async () => {
-		const resp = await axios.get(`http://localhost:8082/api/course`);
-		setCourse(resp.data);
+		try {
+			const resp = await axios.get(`http://localhost:8082/api/course`);
+			setCourse(resp.data);
+		} catch (error) {
+			alert(error);
+		}
 	};
 	const showHome = () => {
 		if (!display) setDisplay(true);

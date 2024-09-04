@@ -15,7 +15,7 @@ const RegisterUser = () => {
 			console.log(user.data);
 			user ? alert("User already present") : "";
 		} catch (error) {
-			console.log(error);
+			alert(error);
 			try {
 				const resp = await axios.post(
 					"http://localhost:8082/api/student",
@@ -25,8 +25,8 @@ const RegisterUser = () => {
 					alert("Resgistered successfully");
 					navigate("/login");
 				}
-			} catch (error) {
-				console.log(error);
+			} catch (err) {
+				alert(err);
 			}
 		}
 	};

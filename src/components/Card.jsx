@@ -2,7 +2,7 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import { TERipple } from "tw-elements-react";
 
-const Card = ({ company, course, imageUrl, type, id }) => {
+const Card = () => {
 	const navigate = useNavigate();
 	const handleclick = (cid) => {
 		navigate(`/dashboard/coursedetails/${cid}`);

@@ -58,7 +58,7 @@ const CourseDetails = () => {
 				`http://localhost:8082/api/student/studentcoursedetails/${semail}`
 			);
 		} catch (error) {
-			console.log(error);
+			alert(error);
 		}
 	};
 	useEffect(() => {
@@ -71,7 +71,7 @@ const CourseDetails = () => {
 
 	useEffect(() => {
 		fetchStudentIdByEmail();
-		fetchCourseById(id);
+		// fetchCourseById(id);
 		loadCourseDetails(id);
 	}, []);
 	return (

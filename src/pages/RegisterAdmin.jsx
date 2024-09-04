@@ -16,7 +16,6 @@ const RegisterAdmin = () => {
 			}
 		} catch (error) {
 			alert(error);
-			console.log(error);
 		}
 	};
 	return (

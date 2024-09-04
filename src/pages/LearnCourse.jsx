@@ -15,7 +15,7 @@ const LearnCourse = () => {
 			const resp = await axios.get(`http://localhost:8082/api/course/${id}`);
 			setCourse(resp.data);
 		} catch (error) {
-			console.log(error);
+			alert(error);
 		}
 	};
 	useEffect(() => {

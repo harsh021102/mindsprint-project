@@ -22,7 +22,6 @@ function App() {
 	return (
 		<>
 			<Navbar loggedIn={loggedIn} setLogged={setLogged} />
-			{/* <Loader /> */}
 			<Routes>
 				<Route path="/" element={<Homepage />} />
 				<Route path="/login" element={<ChoiceLogin />} />

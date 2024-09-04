@@ -8,9 +8,9 @@ const AdminCard = ({ id, email, loadUsers }) => {
 			const resp = await axios.delete(
 				`http://localhost:8082/api/student/${sid}`
 			);
-			console.log(resp.data);
 			loadUsers();
 		} catch (error) {
+			alert(error);
 			console.log(error);
 		}
 	};

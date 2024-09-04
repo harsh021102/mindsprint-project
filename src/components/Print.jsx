@@ -23,6 +23,7 @@ const Print = () => {
 			setName(resp.data.name);
 			setCourse(respCourse.data.title);
 		} catch (error) {
+			alert(error);
 			console.log(error);
 		}
 	};

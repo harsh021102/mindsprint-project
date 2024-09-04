@@ -18,7 +18,7 @@ const LoginUser = () => {
 				navigate("/dashboard/user");
 			}
 		} catch (error) {
-			console.log(error);
+			alert(error);
 		}
 	};
 
